@@ -27,12 +27,12 @@
 }
 
 .card .back {
-  transform: rotateY(0deg);
+  transition-delay: 0.2s;
 }
 
 .flipped .back {
   transform: rotateY(90deg);
-  transition-delay: 0s;
+  transition: all 0.2s ease-in;
 }
 
 @keyframes scaleUp {

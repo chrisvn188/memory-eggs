@@ -95,9 +95,11 @@ export default function App() {
         <h1 className='title'>Memory Eggs</h1>
         <p className='turn'>Turns: {turn}</p>
       </header>
+
       <button className='btn' onClick={shuffleCards}>
         New Game
       </button>
+
       <ul className='cards-list'>
         {cards.map(card => (
           <li key={card.id}>
@@ -111,14 +113,6 @@ export default function App() {
           </li>
         ))}
       </ul>
-      {isGameOver && (
-        <Modal
-          title={'Conglatulation! You won.'}
-          description={`You spent ${turn} turns. Play again to get better result.`}
-          btnText='Play again'
-          shuffleCards={shuffleCards}
-        />
-      )}
     </div>
   )
 }
