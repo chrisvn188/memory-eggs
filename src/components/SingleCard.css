@@ -1,0 +1,16 @@
+.card {
+  position: relative;
+  cursor: pointer;
+}
+
+.card img {
+  display: block;
+  max-width: 100%;
+  border: 2px solid #fff;
+  border-radius: 0.5rem;
+}
+
+.card .front {
+  position: absolute;
+  /* transform: rotateY(90deg); */
+}
