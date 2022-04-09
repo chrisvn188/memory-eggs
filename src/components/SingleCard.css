@@ -1,6 +1,7 @@
 .card {
   position: relative;
   cursor: pointer;
+  animation: scaleUp 0.5s ease-in;
 }
 
 .card img {
@@ -8,9 +9,39 @@
   max-width: 100%;
   border: 2px solid #fff;
   border-radius: 0.5rem;
+  transition: all 0.2s ease-in;
+}
+
+.card img:hover {
+  border-color: #df5700;
 }
 
 .card .front {
   position: absolute;
-  /* transform: rotateY(90deg); */
+  transform: rotateY(90deg);
+}
+
+.flipped .front {
+  transform: rotateY(0deg);
+  transition-delay: 0.2s;
+}
+
+.card .back {
+  transform: rotateY(0deg);
+}
+
+.flipped .back {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+
+@keyframes scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

@@ -10,6 +10,24 @@
   margin-top: 2rem;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.turn {
+  font-size: 1.5rem;
+}
+
 .btn {
   display: inline-block;
   font: inherit;
@@ -29,6 +47,18 @@
 .cards-list {
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .cards-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .cards-list {
+    gap: 2rem;
+  }
 }
